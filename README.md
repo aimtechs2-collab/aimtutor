@@ -155,3 +155,16 @@ If you want, I can also tailor this README for:
 * GitHub repo (with badges, shields, install steps)
 * Marketing landing page version
 * Investor pitch-style documentation
+
+---
+
+## Getting Started (Developers)
+
+Install dependencies and run the dev server:
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`.
