@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Legacy source snapshot (not linted; used for reference/migration):
+    "src/legacy/**",
   ]),
 ]);
 

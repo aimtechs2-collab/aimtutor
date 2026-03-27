@@ -1,0 +1,1 @@
+Hero videos for the geo home live under **`/public/assets/`** (`aimvideo2.webm` / `aimvideo2.mp4`), matching the Frontend `src/assets` files. This folder is reserved for any other video URLs you want at `/videos/*`.
