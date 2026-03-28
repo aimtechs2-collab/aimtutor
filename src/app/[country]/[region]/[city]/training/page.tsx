@@ -39,7 +39,6 @@ export async function generateMetadata({
   const translations = await getTranslations(country);
   const locPrefix = `/${country}/${region}/${slugify(city)}`;
   const canonicalUrl = toAbsoluteUrl(`${locPrefix}/training`);
-  const ogImageUrl = toAbsoluteUrl("/aimlogo.webp");
   const pageTitle = t(translations.seo.trainingTitle, { city: cityTitle, count: "200+" });
   const pageDescription = t(translations.seo.trainingDescription, { city: cityTitle, count: "1000+" });
 
@@ -53,7 +52,7 @@ export async function generateMetadata({
     `cybersecurity courses ${cityTitle}`,
     `DevOps training ${cityTitle}`,
     `best IT training institute ${cityTitle}`,
-    "Aim Tutor",
+    "AimTutor.ai",
     "expert instructors",
     "hands-on learning",
     "industry certification",
@@ -77,25 +76,16 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       url: canonicalUrl,
-      siteName: "Aim Tutor",
+      siteName: "AimTutor.ai",
       locale: geo.ogLocale,
       title: pageTitle,
       description: pageDescription,
-      images: [
-        {
-          url: ogImageUrl,
-          width: 512,
-          height: 512,
-          alt: `Aim Tutor - Technology Training Courses in ${cityTitle}`,
-        },
-      ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       site: "@aimtutor",
       title: pageTitle,
       description: pageDescription,
-      images: [ogImageUrl],
     },
     other: {
       "theme-color": "#3B82F6",

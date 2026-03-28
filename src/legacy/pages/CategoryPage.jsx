@@ -126,7 +126,6 @@ const StructuredData = ({ categoryName, subcategories, allCourses, cityTitle, lo
     "name": "Aim Tutor",
     "alternateName": "AIM Tech Training",
     "url": siteUrl,
-    "logo": `${siteUrl}/images/logo.png`,
     "image": `${siteUrl}/images/aim-technologies-training.jpg`,
     "description": `Leading provider of professional ${categoryName} training in ${cityTitle}. Expert-led courses with hands-on learning and industry certifications.`,
     "address": {

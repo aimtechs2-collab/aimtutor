@@ -50,9 +50,7 @@ export async function generateMetadata({
   const canonicalUrl = toAbsoluteUrl(
     `${locPrefix}/training/${mastercategoryid}/${categoryCitySeo}/${subcategoryid}/${subcategoryCitySeo}`,
   );
-  const ogImageUrl = toAbsoluteUrl("/aimlogo.webp");
-
-  const pageTitle = t(translations.seo.subcategoryTitle || "Best {{name}} Training in {{city}} | Aim Tutor", {
+  const pageTitle = t(translations.seo.subcategoryTitle || "Best {{name}} Training in {{city}} | AimTutor.ai", {
     name: subcategoryName,
     city: cityTitle,
   });
@@ -71,7 +69,7 @@ export async function generateMetadata({
       `${subcategoryName} certification ${cityTitle}`,
       `learn ${subcategoryName} ${cityTitle}`,
       `best ${subcategoryName} training`,
-      "Aim Tutor",
+      "AimTutor.ai",
     ].join(", "),
     robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     alternates: {
@@ -81,18 +79,16 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       url: canonicalUrl,
-      siteName: "Aim Tutor",
+      siteName: "AimTutor.ai",
       locale: geo.ogLocale,
       title: pageTitle,
       description: pageDescription,
-      images: [{ url: ogImageUrl, width: 512, height: 512, alt: `${subcategoryName} Training in ${cityTitle}` }],
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       site: "@aimtutor",
       title: pageTitle,
       description: pageDescription,
-      images: [ogImageUrl],
     },
   };
 }

@@ -318,9 +318,8 @@ export default function EnrollmentForm({
         amount: orderData.amount,
         currency: orderData.currency,
         order_id: orderData.order_id,
-        name: "Aim Tutor",
+        name: "AimTutor.ai",
         description: `Enrollment for ${courseName}`,
-        image: "/logo.png",
         prefill: {
           name: form.name,
           email: form.email,

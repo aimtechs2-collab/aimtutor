@@ -9,15 +9,9 @@ export default function HomeStructuredData({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    name: "Aim Tutor",
+    name: "AimTutor.ai",
     alternateName: ["AIM Tech", "AIM Training", "Aim Tutor Training Institute"],
     url: SITE_URL,
-    logo: `${SITE_URL}/images/logo.png`,
-    image: [
-      `${SITE_URL}/images/aim-technologies-training.jpg`,
-      `${SITE_URL}/images/aim-tech-campus.jpg`,
-      `${SITE_URL}/images/aim-training-labs.jpg`,
-    ],
     description:
       "Leading technology training institute providing professional courses in AI, Cloud Computing, Data Science, DevOps, and emerging technologies.",
     foundingDate: "2015",
@@ -47,12 +41,12 @@ export default function HomeStructuredData({
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Aim Tutor",
+    name: "AimTutor.ai",
     alternateName: "AIM Tech Training",
     url: SITE_URL,
     description:
       "Transform your career with cutting-edge technology training. Expert-led courses in AI, Cloud, Data Science, DevOps.",
-    publisher: { "@type": "Organization", name: "Aim Tutor", "@id": `${SITE_URL}/#organization` },
+    publisher: { "@type": "Organization", name: "AimTutor.ai", "@id": `${SITE_URL}/#organization` },
     potentialAction: {
       "@type": "SearchAction",
       target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/search?q={search_term_string}` },
@@ -66,7 +60,7 @@ export default function HomeStructuredData({
     name: "Professional Technology Training",
     description:
       `Comprehensive technology training programs including AI, Cloud Computing, Data Science, DevOps for learners in ${cityTitle} and worldwide online.`,
-    provider: { "@type": "EducationalOrganization", name: "Aim Tutor", "@id": `${SITE_URL}/#organization` },
+    provider: { "@type": "EducationalOrganization", name: "AimTutor.ai", "@id": `${SITE_URL}/#organization` },
     serviceType: "Educational Training",
     areaServed: { "@type": "Place", name: "Worldwide" },
     audience: { "@type": "EducationalAudience", educationalRole: "student" },

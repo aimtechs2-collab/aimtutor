@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Protected from "./protected";
 import StudentLogoutButton from "@/components/StudentLogoutButton";
+import AimTutorLogo from "@/components/brand/AimTutorLogo";
 import { Bell, Book, BookOpenText, DollarSign, Menu, User, Video, X } from "lucide-react";
 
 const menuItems = [
@@ -95,14 +96,10 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
           `}
         >
           <div className="p-4 sm:p-6">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold flex items-center justify-center shadow-lg">
-                A
-              </div>
+            <div className="flex flex-col gap-1 min-w-0">
+              <AimTutorLogo variant="default" size="sm" className="max-w-full" />
               {sidebarExpanded || (isMobile && mobileMenuOpen) ? (
-                <div className="font-bold text-lg sm:text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent truncate">
-                  Student Portal
-                </div>
+                <div className="font-semibold text-xs sm:text-sm text-gray-600 truncate">Student Portal</div>
               ) : null}
             </div>
           </div>

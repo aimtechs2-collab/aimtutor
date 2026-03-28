@@ -189,11 +189,9 @@ export default function TrainingPageContent({ initialCategories, tt }: TrainingP
     return {
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
-      name: "Aim Tutor",
+      name: "AimTutor.ai",
       alternateName: "AIM Tech Training Institute",
       url: SITE_URL,
-      logo: `${SITE_URL}/images/logo.png`,
-      image: `${SITE_URL}/images/aim-technologies-training-courses.jpg`,
       description: `Leading technology training institute in ${cityTitle} offering ${totalStats.totalCourses}+ expert-led courses across ${totalStats.totalCategories} categories including AI, Cloud Computing, Data Science, and more.`,
       address: {
         "@type": "PostalAddress",
@@ -213,7 +211,7 @@ export default function TrainingPageContent({ initialCategories, tt }: TrainingP
             "@type": "Course",
             name: `${category.title} Training`,
             description: category.description,
-            provider: { "@type": "EducationalOrganization", name: "Aim Tutor" },
+            provider: { "@type": "EducationalOrganization", name: "AimTutor.ai" },
           },
         })),
       },
@@ -232,7 +230,7 @@ export default function TrainingPageContent({ initialCategories, tt }: TrainingP
       "@context": "https://schema.org",
       "@type": "ItemList",
       name: `Technology Training Courses in ${cityTitle}`,
-      description: "Comprehensive list of technology training programs offered by Aim Tutor in " + cityTitle,
+      description: "Comprehensive list of technology training programs offered by AimTutor.ai in " + cityTitle,
       numberOfItems: categories.length,
       itemListElement: categories.map((category, index) => ({
         "@type": "ListItem",
@@ -241,7 +239,7 @@ export default function TrainingPageContent({ initialCategories, tt }: TrainingP
           "@type": "Course",
           name: `${category.title} Training`,
           description: category.description,
-          provider: { "@type": "EducationalOrganization", name: "Aim Tutor" },
+          provider: { "@type": "EducationalOrganization", name: "AimTutor.ai" },
           courseMode: "blended",
           educationalLevel: "All Levels",
           url: `${SITE_URL}${category.link}`,
@@ -265,7 +263,7 @@ export default function TrainingPageContent({ initialCategories, tt }: TrainingP
     return {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: "Aim Tutor",
+      name: "AimTutor.ai",
       url: SITE_URL,
       potentialAction: {
         "@type": "SearchAction",

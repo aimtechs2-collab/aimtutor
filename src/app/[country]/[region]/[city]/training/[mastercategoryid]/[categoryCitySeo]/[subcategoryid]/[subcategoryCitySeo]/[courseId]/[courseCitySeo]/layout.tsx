@@ -42,9 +42,8 @@ export async function generateMetadata({
   const averageRating = 4.6;
   const totalRatings = 10906;
 
-  const pageTitle = `${courseTitle} Course in ${cityTitle} ⭐ ${averageRating}/5 | Aim Tutor`;
+  const pageTitle = `${courseTitle} Course in ${cityTitle} ⭐ ${averageRating}/5 | AimTutor.ai`;
   const pageDescription = `★ Master ${courseTitle} in ${cityTitle}! 🚀 ${averageRating}/5 rating from ${totalRatings.toLocaleString()}+ students ✅ ${totalLessons} lessons ✅ ${totalHours}+ hours. Enroll today!`;
-  const ogImageUrl = toAbsoluteUrl("/aimlogo.webp");
 
   return {
     title: pageTitle,
@@ -56,14 +55,12 @@ export async function generateMetadata({
       url: canonicalUrl,
       title: pageTitle,
       description: pageDescription,
-      images: [{ url: ogImageUrl, width: 1200, height: 630, alt: `${courseTitle} Course in ${cityTitle}` }],
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       site: "@aimtutor",
       title: pageTitle,
       description: pageDescription,
-      images: [ogImageUrl],
     },
   };
 }

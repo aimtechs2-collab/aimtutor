@@ -24,7 +24,6 @@ export async function generateMetadata({
   const C = CONTACT_COMPANY_INFO;
   const pageTitle = `Contact ${C.name} | Admissions and Course Counseling`;
   const pageDescription = `Contact ${C.name} for AI and software training admissions. We operate from our Ameerpet, Hyderabad headquarters and support learners in ${cityTitle} and worldwide through online and hybrid delivery.`;
-  const ogImageUrl = toAbsoluteUrl("/aimlogo.webp");
 
   return {
     title: pageTitle,
@@ -60,22 +59,13 @@ export async function generateMetadata({
       locale: "en_IN",
       title: pageTitle,
       description: pageDescription,
-      images: [
-        {
-          url: ogImageUrl,
-          width: 1200,
-          height: 630,
-          alt: `Contact ${C.name} - ${C.yearsInBusiness} Years of AI Training Excellence`,
-        },
-      ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       site: "@aimtutor",
       creator: "@aimtutor",
       title: pageTitle,
       description: pageDescription,
-      images: [ogImageUrl],
     },
     alternates: {
       canonical: canonicalUrl,

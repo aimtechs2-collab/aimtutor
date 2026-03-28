@@ -34,7 +34,6 @@ const StructuredData = ({ cityTitle, locPrefix }) => {
     "name": "Aim Tutor",
     "alternateName": ["AIM Tech", "AIM Training", "Aim Tutor Training Institute"],
     "url": siteUrl,
-    "logo": `${siteUrl}/images/logo.png`,
     "image": [
       `${siteUrl}/images/aim-technologies-training.jpg`,
       `${siteUrl}/images/aim-tech-campus.jpg`,

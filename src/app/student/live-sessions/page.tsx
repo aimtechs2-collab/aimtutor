@@ -21,6 +21,7 @@ import {
   XCircle,
 } from "lucide-react";
 import { api } from "@/lib/api";
+import { thumbnailUrl } from "@/lib/staticUrl";
 
 type LiveSession = {
   id: number;
@@ -309,7 +310,11 @@ export default function StudentLiveSessionsPage() {
                           </h4>
                           <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-3 sm:p-4 border border-blue-200">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={`https://aifa-cloud.onrender.com/${session.course.thumbnail || ""}`} alt={session.course.title} className="w-full h-24 sm:h-32 object-cover rounded-lg mb-3" />
+                            <img
+                              src={thumbnailUrl(session.course.thumbnail) ?? ""}
+                              alt={session.course.title}
+                              className="w-full h-24 sm:h-32 object-cover rounded-lg mb-3"
+                            />
                             <h5 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base line-clamp-2">{session.course.title}</h5>
                             <p className="text-xs sm:text-sm text-gray-700 mb-2 line-clamp-2">{session.course.short_description}</p>
                           </div>

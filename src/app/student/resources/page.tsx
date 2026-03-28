@@ -28,6 +28,7 @@ import {
   Folder,
 } from "lucide-react";
 import { api } from "@/lib/api";
+import { thumbnailUrl } from "@/lib/staticUrl";
 
 type Course = {
   id: number;
@@ -52,7 +53,6 @@ export default function StudentResourcesPage() {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [expandedModules, setExpandedModules] = useState<Record<string, boolean>>({});
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const BASE_URL = process.env.NEXT_PUBLIC_STATIC_URL || "https://aifa-cloud.onrender.com/static/uploads";
   const CONTACT_INFO = { phone: "9700187077", email: "support@aimtutor.in" };
 
   useEffect(() => { fetchAllResources(); }, []);
@@ -66,10 +66,8 @@ export default function StudentResourcesPage() {
 
   const getFullUrl = useCallback((path?: string) => {
     if (!path) return null;
-    if (path.startsWith("http://") || path.startsWith("https://")) return path;
-    const cleanPath = path.startsWith("/") ? path.slice(1) : path;
-    return `${BASE_URL}/${cleanPath}`;
-  }, [BASE_URL]);
+    return thumbnailUrl(path);
+  }, []);
 
   async function fetchAllResources() {
     try {

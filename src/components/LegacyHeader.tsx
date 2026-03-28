@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useCallback, useEffect, useRef, useState } from "react";
@@ -28,6 +27,7 @@ import {
 } from "@/lib/seoSlug";
 import { getToken, getUser } from "@/lib/auth";
 import ChangeLocationButton from "@/components/ChangeLocationButton";
+import AimTutorLogo from "@/components/brand/AimTutorLogo";
 import type { Translations } from "@/translations/en";
 
 const getCategoryIcon = (categoryName: string) => {
@@ -224,13 +224,10 @@ export default function LegacyHeader({
                 onClick={closeAllMenus}
               >
                 <div className="relative p-1 sm:p-2">
-                  <Image
-                    src="/aimlogo.webp"
-                    alt="Aim Tutor Logo"
-                    width={250}
-                    height={120}
-                    className="h-9 sm:h-10 lg:h-[3.25rem] w-auto object-contain transition-transform duration-300 group-hover:scale-105 brightness-110 contrast-110"
-                    priority
+                  <AimTutorLogo
+                    variant="onDark"
+                    size="lg"
+                    className="transition-transform duration-300 group-hover:scale-105 drop-shadow-sm"
                   />
                 </div>
               </Link>

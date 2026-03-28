@@ -20,6 +20,7 @@ import {
   Globe,
 } from "lucide-react";
 import type { Translations } from "@/translations/en";
+import AimTutorLogo from "@/components/brand/AimTutorLogo";
 
 type PopularCourse = { id: number; title: string; name: string };
 
@@ -94,17 +95,13 @@ export default function GeoFooter({ locPrefix, city, translations: tt }: GeoFoot
       <div className="relative z-10 max-w-7xl mx-auto px-5 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-1">
-            <Link href={locPrefix} className="flex items-center gap-3 mb-8 group">
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
-                  <GraduationCap className="w-7 h-7 text-white" />
-                </div>
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
-              </div>
-              <div>
-                <h3 className="text-white text-2xl font-bold">Aim Tutor</h3>
-                <p className="text-xs text-cyan-400 font-medium">The Academy  of AI</p>
-              </div>
+            <Link href={locPrefix} className="flex flex-col items-start gap-2 mb-8 group">
+              <AimTutorLogo
+                variant="onDark"
+                size="lg"
+                className="group-hover:opacity-95 transition-opacity"
+              />
+              <p className="text-xs text-cyan-400 font-medium">The Academy of AI</p>
             </Link>
 
             <p className="mb-8 text-gray-400 leading-relaxed">

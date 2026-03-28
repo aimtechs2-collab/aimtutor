@@ -30,10 +30,9 @@ export async function generateMetadata({
   const locPrefix = `/${country}/${region}/${slugify(city)}`;
   const canonicalUrl = toAbsoluteUrl(`${locPrefix}/training/${mastercategoryid}/${categoryCitySeo}`);
 
-  let categoryName = parsed?.name ? toTitle(parsed.name) : "Training";
+  const categoryName = parsed?.name ? toTitle(parsed.name) : "Training";
   const totalCoursesLabel = "100+";
-  const ogImageUrl = toAbsoluteUrl("/aimlogo.webp");
-  const pageTitle = `Best ${categoryName} Training in ${cityTitle} ⭐ Online & Classroom Courses | Aim Tutor`;
+  const pageTitle = `Best ${categoryName} Training in ${cityTitle} ⭐ Online & Classroom Courses | AimTutor.ai`;
   const pageDescription = `★ Top-rated ${categoryName} training in ${cityTitle}! 🚀 4.8/5 rating ✅ ${totalCoursesLabel} courses ✅ Expert instructors ✅ Hands-on labs ✅ Job assistance. Enroll today!`;
   const keywords = [
     `${categoryName} training ${cityTitle}`,
@@ -45,7 +44,7 @@ export async function generateMetadata({
     `${categoryName} institute ${cityTitle}`,
     `online ${categoryName} training`,
     `${categoryName} bootcamp`,
-    "Aim Tutor",
+    "AimTutor.ai",
     "professional training",
     "hands-on learning",
     "expert instructors",
@@ -62,24 +61,15 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       url: canonicalUrl,
-      siteName: "Aim Tutor",
+      siteName: "AimTutor.ai",
       title: pageTitle,
       description: pageDescription,
-      images: [
-        {
-          url: ogImageUrl,
-          width: 1200,
-          height: 630,
-          alt: `${categoryName} Training in ${cityTitle} - Aim Tutor`,
-        },
-      ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       site: "@aimtutor",
       title: pageTitle,
       description: pageDescription,
-      images: [ogImageUrl],
     },
   };
 }

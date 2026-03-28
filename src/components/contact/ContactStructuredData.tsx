@@ -26,12 +26,6 @@ const ContactStructuredDataInner = memo(function ContactStructuredData({
       name: C.name,
       alternateName: [C.alternateName, "AIM Tech", "Aim Tutor Training Institute"],
       url: C.website,
-      logo: `${siteOrigin}/images/logo.png`,
-      image: [
-        `${siteOrigin}/images/aim-technologies-campus.jpg`,
-        `${siteOrigin}/images/aim-tech-ameerpet.jpg`,
-        `${siteOrigin}/images/aim-training-classroom.jpg`,
-      ],
       description: `${C.name} - ${C.yearsInBusiness} years of excellence in AI and technology training. ${C.studentsPlaced} students trained, ${C.corporateClients} corporate clients. Premier AI training institute in Ameerpet, Hyderabad.`,
       foundingDate: C.foundingYear.toString(),
       numberOfEmployees: {

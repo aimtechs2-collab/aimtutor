@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { api } from "@/lib/api";
+import { thumbnailUrl } from "@/lib/staticUrl";
 import {
   BookOpen,
   Clock,
@@ -40,14 +41,11 @@ export default function StudentCoursesPage() {
   const [courses, setCourses] = useState<Course[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const BASE_URL = process.env.NEXT_PUBLIC_STATIC_URL || "https://aifa-cloud.onrender.com/static/uploads";
   const CONTACT_INFO = { phone: "9700187077", email: "support@aimtutor.in" };
 
   const getFullUrl = (path?: string) => {
     if (!path) return "/placeholder.jpg";
-    if (path.startsWith("http://") || path.startsWith("https://")) return path;
-    const cleanPath = path.startsWith("/") ? path.slice(1) : path;
-    return `${BASE_URL}/${cleanPath}`;
+    return thumbnailUrl(path) ?? "/placeholder.jpg";
   };
 
   const getDifficultyBadge = (level?: string) => {

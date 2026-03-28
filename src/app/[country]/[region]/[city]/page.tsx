@@ -25,7 +25,6 @@ export async function generateMetadata({
   const canonicalUrl = toAbsoluteUrl(locPrefix);
   const pageTitle = t(translations.seo.homeTitle, { city: cityTitle });
   const pageDescription = t(translations.seo.homeDescription, { city: cityTitle });
-  const ogImageUrl = toAbsoluteUrl("/aimlogo.webp");
 
   return {
     title: pageTitle,
@@ -38,7 +37,7 @@ export async function generateMetadata({
       `best IT institute ${cityTitle}`,
       "machine learning courses",
       "DevOps training",
-      "Aim Tutor",
+      "AimTutor.ai",
       "placement assistance",
     ].join(", "),
     authors: [{ name: "Aim Tutor" }],
@@ -48,25 +47,16 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       url: canonicalUrl,
-      siteName: "Aim Tutor",
+      siteName: "AimTutor.ai",
       locale: geo.ogLocale,
       title: pageTitle,
       description: pageDescription,
-      images: [
-        {
-          url: ogImageUrl,
-          width: 512,
-          height: 512,
-          alt: `Aim Tutor - Best Technology Training Institute in ${cityTitle}`,
-        },
-      ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       site: "@aimtutor",
       title: pageTitle,
       description: pageDescription,
-      images: [ogImageUrl],
     },
     alternates: {
       canonical: canonicalUrl,
@@ -82,7 +72,7 @@ export async function generateMetadata({
       ICBM: `${geo.lat}, ${geo.lng}`,
       "theme-color": "#3B82F6",
       "format-detection": "telephone=yes",
-      "apple-mobile-web-app-title": "Aim Tutor",
+      "apple-mobile-web-app-title": "AimTutor.ai",
       "apple-mobile-web-app-capable": "yes",
     },
   };

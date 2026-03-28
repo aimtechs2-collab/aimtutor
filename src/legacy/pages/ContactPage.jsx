@@ -328,7 +328,6 @@ function ContactPage() {
     "name": COMPANY_INFO.name,
     "alternateName": [COMPANY_INFO.alternateName, "AIM Tech", "Aim Tutor Training Institute"],
     "url": COMPANY_INFO.website,
-    "logo": `${siteUrl}/images/logo.png`,
     "image": [
       `${siteUrl}/images/aim-technologies-campus.jpg`,
       `${siteUrl}/images/aim-tech-ameerpet.jpg`,

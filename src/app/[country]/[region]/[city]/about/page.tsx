@@ -23,7 +23,6 @@ export async function generateMetadata({
   const canonicalUrl = toAbsoluteUrl(`${locPrefix}/about`);
   const pageTitle = `About ${COMPANY_INFO.name} | ${COMPANY_INFO.yearsInBusiness}+ Years of AI & Software Training Excellence`;
   const pageDescription = `${COMPANY_INFO.name} has delivered software and AI training since ${COMPANY_INFO.foundingYear}. Our physical headquarters is in ${LOCATION.address.locality}, ${LOCATION.address.city}, and we serve learners in ${cityTitle} and worldwide through online and hybrid programs.`;
-  const ogImageUrl = toAbsoluteUrl("/aimlogo.webp");
 
   return {
     title: pageTitle,
@@ -64,22 +63,13 @@ export async function generateMetadata({
       locale: "en_IN",
       title: pageTitle,
       description: pageDescription,
-      images: [
-        {
-          url: ogImageUrl,
-          width: 1200,
-          height: 630,
-          alt: `${COMPANY_INFO.name} - ${COMPANY_INFO.yearsInBusiness}+ Years of AI & Software Training Excellence`,
-        },
-      ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       site: "@aimtutor",
       creator: "@aimtutor",
       title: pageTitle,
       description: pageDescription,
-      images: [ogImageUrl],
     },
     alternates: {
       canonical: canonicalUrl,

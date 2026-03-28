@@ -5,10 +5,16 @@ const nextConfig: NextConfig = {
     const adminBackend =
       process.env.NEXT_PUBLIC_ADMIN_BACKEND_URL ?? "http://localhost:3001";
 
+    /** Course images live under admin `public/uploads` unless you override. */
+    const uploadsOrigin =
+      process.env.NEXT_PUBLIC_UPLOADS_ORIGIN ??
+      process.env.NEXT_PUBLIC_ADMIN_BACKEND_URL ??
+      "http://localhost:3001";
+
     return [
       {
         source: "/uploads/:path*",
-        destination: `${process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://localhost:5000"}/uploads/:path*`,
+        destination: `${uploadsOrigin}/uploads/:path*`,
       },
       {
         source: "/api/detect-location",

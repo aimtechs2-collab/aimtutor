@@ -18,14 +18,7 @@ import {
   Tag,
   ChevronRight,
 } from "lucide-react";
-
-const STATIC_URL = process.env.NEXT_PUBLIC_STATIC_URL ?? "";
-
-function getImageUrl(thumbnailPath: string | null | undefined): string | null {
-  if (!thumbnailPath) return null;
-  const clean = thumbnailPath.replace(/\\/g, "/").replace(/^\/+/, "");
-  return `${STATIC_URL}/${clean}`;
-}
+import { thumbnailUrl } from "@/lib/staticUrl";
 
 type Course = {
   id: number;
@@ -264,7 +257,7 @@ export default function CourseCatalogue({ locPrefix, citySlug }: { locPrefix: st
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredCourses.map((course) => {
-              const imgUrl = getImageUrl(course.thumbnail);
+              const imgUrl = thumbnailUrl(course.thumbnail);
               return (
                 <div
                   key={`${course.id}-${course.subcategoryId}`}

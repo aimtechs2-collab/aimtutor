@@ -52,7 +52,6 @@ const StructuredData = ({
       "@type": "EducationalOrganization",
       "name": "Aim Tutor",
       "url": siteUrl,
-      "logo": `${siteUrl}/images/logo.png`,
     },
     "educationalLevel": courseData.difficulty_level || "All Levels",
     "timeRequired": `PT${courseData.duration_hours || 24}H`,

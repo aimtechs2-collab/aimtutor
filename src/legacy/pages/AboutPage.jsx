@@ -227,13 +227,6 @@ const StructuredData = React.memo(({ siteUrl }) => {
     "name": COMPANY_INFO.name,
     "alternateName": [COMPANY_INFO.alternateName, "AIM Tech", "Aim Tutor Training Institute"],
     "url": COMPANY_INFO.website,
-    "logo": {
-      "@type": "ImageObject",
-      "url": `${siteUrl}/images/logo.png`,
-      "width": 200,
-      "height": 60
-    },
-    "image": `${siteUrl}/images/aim-technologies-campus.jpg`,
     "description": `${COMPANY_INFO.name} is a premier AI and software training institute with ${COMPANY_INFO.yearsInBusiness}+ years of excellence since ${COMPANY_INFO.foundingYear}. Located in ${LOCATION.address.locality}, ${LOCATION.address.city}, we offer world-class AI, Machine Learning, and technology training programs globally.`,
     "foundingDate": COMPANY_INFO.foundingYear.toString(),
     "foundingLocation": {

@@ -30,7 +30,6 @@ const StructuredData = ({ categories, cityTitle, locPrefix, totalStats }) => {
     "name": "Aim Tutor",
     "alternateName": "AIM Tech Training Institute",
     "url": siteUrl,
-    "logo": `${siteUrl}/images/logo.png`,
     "image": `${siteUrl}/images/aim-technologies-training-courses.jpg`,
     "description": `Leading technology training institute in ${cityTitle} offering ${totalStats.totalCourses}+ expert-led courses across ${totalStats.totalCategories} categories including AI, Cloud Computing, Data Science, and more.`,
     "address": {

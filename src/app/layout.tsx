@@ -20,18 +20,17 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteOrigin()),
   title: {
-    default: "Aim Tutor — #1 AI & Software Training Institute | 20+ Years of Excellence",
-    template: "%s | Aim Tutor",
+    default: "AimTutor.ai — AI & Software Training | 20+ Years of Excellence",
+    template: "%s | AimTutor.ai",
   },
   description:
     "Transform your career with Aim Tutor! Expert-led training in AI, Cloud Computing, Data Science, DevOps & more. 100K+ students trained. 20+ years of excellence. Enroll now!",
   openGraph: {
     type: "website",
-    siteName: "Aim Tutor",
-    images: [{ url: "/aimlogo.webp", width: 512, height: 512, alt: "Aim Tutor Logo" }],
+    siteName: "AimTutor.ai",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     site: "@aimtutor",
   },
   robots: "index, follow",

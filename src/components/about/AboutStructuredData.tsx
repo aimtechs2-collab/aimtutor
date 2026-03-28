@@ -31,13 +31,6 @@ const AboutStructuredDataInner = memo(function AboutStructuredData({
         "Aim Tutor Training Institute",
       ],
       url: COMPANY_INFO.website,
-      logo: {
-        "@type": "ImageObject",
-        url: `${siteOrigin}/images/logo.png`,
-        width: 200,
-        height: 60,
-      },
-      image: `${siteOrigin}/images/aim-technologies-campus.jpg`,
       description: `${COMPANY_INFO.name} is a premier AI and software training institute with ${COMPANY_INFO.yearsInBusiness}+ years of excellence since ${COMPANY_INFO.foundingYear}. Located in ${LOCATION.address.locality}, ${LOCATION.address.city}, we offer world-class AI, Machine Learning, and technology training programs globally.`,
       foundingDate: COMPANY_INFO.foundingYear.toString(),
       foundingLocation: {
@@ -206,7 +199,6 @@ const AboutStructuredDataInner = memo(function AboutStructuredData({
       "@context": "https://schema.org",
       "@type": ["LocalBusiness", "EducationalOrganization", "ProfessionalService"],
       name: `${COMPANY_INFO.name} - ${LOCATION.address.locality}`,
-      image: `${siteOrigin}/images/aim-technologies-campus.jpg`,
       description: `Premier AI training institute with ${COMPANY_INFO.yearsInBusiness} years of excellence. ${COMPANY_INFO.studentsTrained} students trained since ${COMPANY_INFO.foundingYear}.`,
       address: {
         "@type": "PostalAddress",

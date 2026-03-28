@@ -17,7 +17,7 @@ import {
   Book,
   BookOpenText
 } from "lucide-react";
-import Logo from "../assets/aimlogo.webp";
+import AimTutorLogo from "../../components/brand/AimTutorLogo";
 
 
 // ✅ UPDATED: Add paths to menu items
@@ -152,11 +152,7 @@ export default function StudentDash() {
           <div className="flex items-center gap-3">
             {/* <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg flex-shrink-0"> */}
             {/* <GraduationCap className="w-4 h-4 sm:w-6 sm:h-6 text-white" /> */}
-            <img src={Logo} alt="AIM Logo"
-              width="20"   // Actual file dimensions
-              height="10"  // Actual file dimensions
-              className="h-10 lg:h-10 w-auto object-contain transition-transform 
-  duration-300 group-hover:scale-105 filter brightness-110 contrast-125"/>
+            <AimTutorLogo variant="default" size="sm" className="max-w-[180px]" />
             {/* </div>/ */}
             {(sidebarExpanded || (isMobile && mobileMenuOpen)) && (
               <div className="font-bold text-lg sm:text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent truncate">

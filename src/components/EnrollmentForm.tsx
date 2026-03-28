@@ -133,7 +133,7 @@ export default function EnrollmentForm({
           amount: orderData.amount,
           currency: orderData.currency,
           order_id: orderData.order_id,
-          name: "Aim Tutor",
+          name: "AimTutor.ai",
           description: `Enrollment: ${courseName}`,
           prefill: { name, email, contact: phone },
           handler: async (response: Record<string, string>) => {
@@ -182,8 +182,8 @@ export default function EnrollmentForm({
   }
 
   return (
-    <div className="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto">
-      <div className="rounded-xl border shadow-lg overflow-hidden bg-white">
+    <div className="w-full">
+      <div className="rounded-xl border border-gray-200 shadow-lg overflow-hidden bg-white">
         <div className="p-6 bg-gradient-to-br from-violet-50 to-purple-50 border-b">
           <div className="mb-2">
             {price > 0 ? (

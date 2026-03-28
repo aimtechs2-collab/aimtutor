@@ -17,7 +17,7 @@ import {
   LayoutDashboard,
   LogIn
 } from "lucide-react";
-import Logo from "../assets/aimlogo.webp";
+import AimTutorLogo from "../../components/brand/AimTutorLogo";
 import api from "../utils/api";
 import {
   buildCategoryCitySeo,
@@ -283,13 +283,10 @@ const Header = ({ isHome }) => {
             >
               <div className="relative">
                 <div className="relative p-2">
-                  <img
-                    src={Logo}
-                    alt="Aim Tutor Logo"
-                    width="250"   // Actual file dimensions
-                    height="120"  // Actual file dimensions
-                    className="h-10 lg:h-14 w-auto object-contain transition-transform 
-  duration-300 group-hover:scale-105 filter brightness-110 contrast-125"
+                  <AimTutorLogo
+                    variant="onDark"
+                    size="lg"
+                    className="transition-transform duration-300 group-hover:scale-105 drop-shadow-sm"
                   />
                 </div>
               </div>
