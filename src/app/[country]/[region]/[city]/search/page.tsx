@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useParams, usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
@@ -50,7 +50,7 @@ type Filters = {
   sortBy: "relevance" | "newest" | "price_low" | "price_high" | "duration_short" | "duration_long";
 };
 
-export default function SearchPage() {
+function SearchPageInner() {
   const params = useParams<{ country: string; region: string; city: string }>();
   const router = useRouter();
   const pathname = usePathname();
@@ -601,5 +601,19 @@ export default function SearchPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-[50vh] flex items-center justify-center text-zinc-500">
+          Loading search…
+        </div>
+      }
+    >
+      <SearchPageInner />
+    </Suspense>
   );
 }
